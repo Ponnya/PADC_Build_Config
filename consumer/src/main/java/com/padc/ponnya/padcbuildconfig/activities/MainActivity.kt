@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.padc.ponnya.padcbuildconfig.R
 import com.padc.ponnya.padcbuildconfig.adapters.RestaurantsAdapter
 import com.padc.ponnya.padcbuildconfig.databinding.ActivityMainBinding
 import com.padc.ponnya.shared.data.vos.RestaurantVO
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity(), MainView {
 
     private fun setUpToolbar() {
         setSupportActionBar(binding.toolbar)
-        supportActionBar?.title = "Welcome"
+        supportActionBar?.title = "Welcome from ${getString(R.string.app_name)}"
     }
 
     private fun setUpRecyclerView() {
