@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "757095366620",
+    "project_id": "testingnotification-c5324",
+    "storage_bucket": "testingnotification-c5324.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:757095366620:android:775fad197f382fbceb5919",
+        "android_client_info": {
+          "package_name": "com.padc.ponnya.rider"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "757095366620-kr0rs6u7j7v6pia6n8ubhobgfrl67iih.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBsdWouVh0PSAJiyS0uUPcevWEr02ccqE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "757095366620-kr0rs6u7j7v6pia6n8ubhobgfrl67iih.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
