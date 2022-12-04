@@ -3,11 +3,12 @@ package com.padc.ponnya.rider
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.app.PendingIntent
 import android.content.Context
 import android.os.Build
 import androidx.core.app.NotificationCompat
 
-fun sendNotification(context: Context, body: String, title: String) {
+fun sendNotification(context: Context, body: String, title: String, pendingIntent: PendingIntent) {
     val notificationManager =
         context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
@@ -24,7 +25,8 @@ fun sendNotification(context: Context, body: String, title: String) {
         notificationManager.createNotificationChannel(channel)
     }
 
-    val notification = buildNotification(context, NOTIFICATION_CHANNEL_ID, title, body)
+    val notification =
+        buildNotification(context, NOTIFICATION_CHANNEL_ID, title, body, pendingIntent)
 
     notificationManager.notify(getUniqueId(), notification)
 }
@@ -34,6 +36,7 @@ private fun buildNotification(
     channelId: String,
     title: String,
     content: String,
+    pendingIntent: PendingIntent
 ): Notification {
     val bigTextStyle = NotificationCompat.BigTextStyle()
 
@@ -45,6 +48,7 @@ private fun buildNotification(
         .setContentText(title)
         .setAutoCancel(true)
         .setStyle(bigTextStyle)
+        .setContentIntent(pendingIntent)
         .build()
 }
 
